@@ -21,7 +21,7 @@ def generateAccountData(fileName, no_entries = 1500):
                 continue
             accountDict[username] = {'name' : name, 'email' : email}
             accountDict[username]['password'] = ''.join([chr(choice(list(chain(range(ord('0'), ord('9') + 1),
-                                                                               range(ord('a'), ord('f') + 1))))) for _ in range(17)])
+                                                                               range(ord('a'), ord('f') + 1))))) for _ in range(16)])
             accountDict[username]['status'] = None
             if randint(0, 3):
                 accountDict[username]['status'] = generateStatus()
